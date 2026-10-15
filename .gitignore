@@ -1,0 +1,53 @@
+# Build output
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.userosscache
+*.suo
+
+# Rider
+.idea/
+*.sln.iml
+
+# Visual Studio Code
+.vscode/
+
+# Test results
+TestResults/
+*.trx
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.*
+
+# Local database files
+*.mdf
+*.ldf
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# ASP.NET Core
+wwwroot/
+
+# EF Core generated files
+
+
+# Temporary files
+*.tmp
+*.temp
+
+src/SmartSupplyChain.API/appsettings.json
+src/SmartSupplyChain.API/appsettings.Development.json

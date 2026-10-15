@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartSupplyChain - Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="header-content">
+
+            <div class="logo">
+                SmartSupplyChain
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li>
+                        <a href="dashboard.html">Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a href="customers.html">Customers</a>
+                    </li>
+
+                    <li>
+                        <a href="orders.html">Orders</a>
+                    </li>
+
+                    <li>
+                        <a href="shipments.html">Shipments</a>
+                    </li>
+
+                    <li>
+                        <a href="tracking.html">Tracking</a>
+                    </li>
+
+                    <li>
+                        <a href="reports.html">Reports</a>
+                    </li>
+
+                    <li>
+                        <a href="#" id="logoutButton">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main class="page-content">
+
+        <div class="dashboard-header">
+
+            <div>
+                <h1 class="page-title">
+                    Dashboard
+                </h1>
+
+                <p id="welcomeMessage">
+                    Welcome to SmartSupplyChain
+                </p>
+            </div>
+
+        </div>
+
+        <section class="dashboard-cards">
+
+            <div class="dashboard-card">
+                <h3>Customers</h3>
+
+                <p class="dashboard-number" id="customerCount">
+                    0
+                </p>
+
+                <a href="customers.html">
+                    View Customers
+                </a>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Orders</h3>
+
+                <p class="dashboard-number" id="orderCount">
+                    0
+                </p>
+
+                <a href="orders.html">
+                    View Orders
+                </a>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Shipments</h3>
+
+                <p class="dashboard-number" id="shipmentCount">
+                    0
+                </p>
+
+                <a href="shipments.html">
+                    View Shipments
+                </a>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Reports</h3>
+
+                <p class="dashboard-number">
+                    →
+                </p>
+
+                <a href="reports.html">
+                    View Reports
+                </a>
+            </div>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Quick Actions</h2>
+
+            <div class="quick-actions">
+
+                <a href="customers.html" class="btn btn-primary">
+                    Manage Customers
+                </a>
+
+                <a href="orders.html" class="btn btn-success">
+                    Manage Orders
+                </a>
+
+                <a href="shipments.html" class="btn btn-secondary">
+                    Manage Shipments
+                </a>
+
+                <a href="tracking.html" class="btn btn-primary">
+                    Track Shipment
+                </a>
+
+                <a href="reports.html" class="btn btn-secondary">
+                    View Reports
+                </a>
+
+            </div>
+
+        </section>
+
+        <section class="card">
+
+            <h2>System Information</h2>
+
+            <p>
+                SmartSupplyChain provides centralized management
+                of customers, orders, shipments, delivery,
+                tracking, payments, and reports.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+
+</body>
+</html>

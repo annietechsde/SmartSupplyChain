@@ -1,0 +1,110 @@
+/* =========================================
+   SmartSupplyChain - Form Styles
+   ========================================= */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 11px 12px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+
+    background-color: #ffffff;
+    color: #111827;
+
+    font-size: 14px;
+    font-family: inherit;
+
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Form button */
+
+.form-button {
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* Form messages */
+
+.form-message {
+    min-height: 22px;
+    margin-top: 12px;
+
+    text-align: center;
+    font-size: 14px;
+}
+
+.form-message.success {
+    color: #15803d;
+}
+
+.form-message.error {
+    color: #dc2626;
+}
+
+/* Form rows */
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+/* Required field indicator */
+
+.required {
+    color: #dc2626;
+}
+
+/* Checkbox */
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkbox-group input {
+    width: auto;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1F466C68-EB77-4A0A-A316-5E041A9D63CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartSupplyChain.API", "src\SmartSupplyChain.API\SmartSupplyChain.API.csproj", "{CD7B44A5-2324-432B-9830-7ED807CF04F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartSupplyChain.Core", "src\SmartSupplyChain.Core\SmartSupplyChain.Core.csproj", "{C326CAE9-14D4-41FF-BBDE-7D2462193E9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartSupplyChain.Application", "src\SmartSupplyChain.Application\SmartSupplyChain.Application.csproj", "{15968212-12DF-4E1F-BECE-6285E21AB70E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartSupplyChain.Infrastructure", "src\SmartSupplyChain.Infrastructure\SmartSupplyChain.Infrastructure.csproj", "{C809BF5A-72EF-4B42-B0DF-B7F3F8B48ACD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3B3F2858-7F0B-429B-9F98-5124D8D32B74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartSupplyChain.Tests", "tests\SmartSupplyChain.Tests\SmartSupplyChain.Tests.csproj", "{BFF84A5F-0B0D-4C0F-9CFF-FA208B9F4322}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD7B44A5-2324-432B-9830-7ED807CF04F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD7B44A5-2324-432B-9830-7ED807CF04F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD7B44A5-2324-432B-9830-7ED807CF04F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD7B44A5-2324-432B-9830-7ED807CF04F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C326CAE9-14D4-41FF-BBDE-7D2462193E9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C326CAE9-14D4-41FF-BBDE-7D2462193E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C326CAE9-14D4-41FF-BBDE-7D2462193E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C326CAE9-14D4-41FF-BBDE-7D2462193E9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15968212-12DF-4E1F-BECE-6285E21AB70E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15968212-12DF-4E1F-BECE-6285E21AB70E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15968212-12DF-4E1F-BECE-6285E21AB70E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15968212-12DF-4E1F-BECE-6285E21AB70E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C809BF5A-72EF-4B42-B0DF-B7F3F8B48ACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C809BF5A-72EF-4B42-B0DF-B7F3F8B48ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C809BF5A-72EF-4B42-B0DF-B7F3F8B48ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C809BF5A-72EF-4B42-B0DF-B7F3F8B48ACD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFF84A5F-0B0D-4C0F-9CFF-FA208B9F4322}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF84A5F-0B0D-4C0F-9CFF-FA208B9F4322}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF84A5F-0B0D-4C0F-9CFF-FA208B9F4322}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF84A5F-0B0D-4C0F-9CFF-FA208B9F4322}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CD7B44A5-2324-432B-9830-7ED807CF04F6} = {1F466C68-EB77-4A0A-A316-5E041A9D63CF}
+		{C326CAE9-14D4-41FF-BBDE-7D2462193E9F} = {1F466C68-EB77-4A0A-A316-5E041A9D63CF}
+		{15968212-12DF-4E1F-BECE-6285E21AB70E} = {1F466C68-EB77-4A0A-A316-5E041A9D63CF}
+		{C809BF5A-72EF-4B42-B0DF-B7F3F8B48ACD} = {1F466C68-EB77-4A0A-A316-5E041A9D63CF}
+		{BFF84A5F-0B0D-4C0F-9CFF-FA208B9F4322} = {3B3F2858-7F0B-429B-9F98-5124D8D32B74}
+	EndGlobalSection
+EndGlobal

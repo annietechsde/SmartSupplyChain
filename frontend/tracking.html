@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartSupplyChain - Tracking</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="header-content">
+
+            <div class="logo">
+                SmartSupplyChain
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+
+                    <li>
+                        <a href="dashboard.html">Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a href="customers.html">Customers</a>
+                    </li>
+
+                    <li>
+                        <a href="orders.html">Orders</a>
+                    </li>
+
+                    <li>
+                        <a href="shipments.html">Shipments</a>
+                    </li>
+
+                    <li>
+                        <a href="tracking.html">Tracking</a>
+                    </li>
+
+                    <li>
+                        <a href="reports.html">Reports</a>
+                    </li>
+
+                    <li>
+                        <a href="#" id="logoutButton">Logout</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main class="page-content">
+
+        <h1 class="page-title">
+            Shipment Tracking
+        </h1>
+
+        <!-- Tracking Search -->
+
+        <section class="card">
+
+            <h2>Track Shipment</h2>
+
+            <form id="trackingForm">
+
+                <div class="form-group">
+
+                    <label for="trackingNumber">
+                        Tracking Number
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="trackingNumber"
+                        name="trackingNumber"
+                        placeholder="Enter tracking number"
+                        required
+                    >
+
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    Track Shipment
+                </button>
+
+                <p id="trackingMessage" class="form-message"></p>
+
+            </form>
+
+        </section>
+
+        <!-- Tracking Result -->
+
+        <section class="card">
+
+            <h2>Tracking Information</h2>
+
+            <div id="trackingResult">
+
+                <p>
+                    Enter a tracking number to view shipment information.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/tracking.js"></script>
+
+</body>
+</html>

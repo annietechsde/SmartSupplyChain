@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartSupplyChain - Customers</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="header-content">
+
+            <div class="logo">
+                SmartSupplyChain
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li>
+                        <a href="dashboard.html">Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a href="customers.html">Customers</a>
+                    </li>
+
+                    <li>
+                        <a href="orders.html">Orders</a>
+                    </li>
+
+                    <li>
+                        <a href="shipments.html">Shipments</a>
+                    </li>
+
+                    <li>
+                        <a href="tracking.html">Tracking</a>
+                    </li>
+
+                    <li>
+                        <a href="reports.html">Reports</a>
+                    </li>
+
+                    <li>
+                        <a href="#" id="logoutButton">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main class="page-content">
+
+        <h1 class="page-title">
+            Customers
+        </h1>
+
+        <!-- Add Customer -->
+
+        <section class="card">
+
+            <h2>Add Customer</h2>
+
+            <form id="customerForm">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="firstName">
+                            First Name <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="firstName"
+                            name="firstName"
+                            placeholder="Enter first name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">
+                            Last Name <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="lastName"
+                            name="lastName"
+                            placeholder="Enter last name"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label for="email">
+                            Email <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">
+                            Phone
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter phone number"
+                        >
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="address">
+                        Address
+                    </label>
+
+                    <textarea
+                        id="address"
+                        name="address"
+                        placeholder="Enter customer address"
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    Add Customer
+                </button>
+
+                <p id="customerMessage" class="form-message"></p>
+
+            </form>
+
+        </section>
+
+        <!-- Customer List -->
+
+        <section class="card">
+
+            <h2>Customer List</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="customerTableBody">
+
+                        <tr>
+                            <td colspan="5">
+                                Loading customers...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/customers.js"></script>
+
+</body>
+</html>
