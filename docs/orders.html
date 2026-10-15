@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartSupplyChain - Orders</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="header-content">
+
+            <div class="logo">
+                SmartSupplyChain
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li>
+                        <a href="dashboard.html">Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a href="customers.html">Customers</a>
+                    </li>
+
+                    <li>
+                        <a href="orders.html">Orders</a>
+                    </li>
+
+                    <li>
+                        <a href="shipments.html">Shipments</a>
+                    </li>
+
+                    <li>
+                        <a href="tracking.html">Tracking</a>
+                    </li>
+
+                    <li>
+                        <a href="reports.html">Reports</a>
+                    </li>
+
+                    <li>
+                        <a href="#" id="logoutButton">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main class="page-content">
+
+        <h1 class="page-title">
+            Orders
+        </h1>
+
+        <!-- Create Order -->
+
+        <section class="card">
+
+            <h2>Create Order</h2>
+
+            <form id="orderForm">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="customerId">
+                            Customer ID <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="number"
+                            id="customerId"
+                            name="customerId"
+                            placeholder="Enter customer ID"
+                            min="1"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="expectedDeliveryDate">
+                            Expected Delivery Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="expectedDeliveryDate"
+                            name="expectedDeliveryDate"
+                        >
+
+                    </div>
+
+                </div>
+
+                <h3>Order Item</h3>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="productName">
+                            Product Name <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="productName"
+                            name="productName"
+                            placeholder="Enter product name"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="productCode">
+                            Product Code <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="productCode"
+                            name="productCode"
+                            placeholder="Enter product code"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="quantity">
+                            Quantity <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="number"
+                            id="quantity"
+                            name="quantity"
+                            min="1"
+                            placeholder="Enter quantity"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="unitPrice">
+                            Unit Price <span class="required">*</span>
+                        </label>
+
+                        <input
+                            type="number"
+                            id="unitPrice"
+                            name="unitPrice"
+                            min="0"
+                            step="0.01"
+                            placeholder="Enter unit price"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    Create Order
+                </button>
+
+                <p id="orderMessage" class="form-message"></p>
+
+            </form>
+
+        </section>
+
+        <!-- Order List -->
+
+        <section class="card">
+
+            <h2>Order List</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Customer ID</th>
+                            <th>Expected Delivery</th>
+                            <th>Items</th>
+                            <th>Actions</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="orderTableBody">
+
+                        <tr>
+                            <td colspan="5">
+                                Loading orders...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/orders.js"></script>
+
+</body>
+</html>

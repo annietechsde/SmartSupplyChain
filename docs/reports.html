@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>SmartSupplyChain - Reports</title>
+
+<link rel="stylesheet" href="css/style.css">
+```
+
+</head>
+
+<body>
+
+```
+<header class="header">
+
+    <div class="header-content">
+
+        <div class="logo">
+            SmartSupplyChain
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+
+                <li>
+                    <a href="dashboard.html">Dashboard</a>
+                </li>
+
+                <li>
+                    <a href="customers.html">Customers</a>
+                </li>
+
+                <li>
+                    <a href="orders.html">Orders</a>
+                </li>
+
+                <li>
+                    <a href="shipments.html">Shipments</a>
+                </li>
+
+                <li>
+                    <a href="tracking.html">Tracking</a>
+                </li>
+
+                <li>
+                    <a href="reports.html">Reports</a>
+                </li>
+
+                <li>
+                    <a href="#" id="logoutButton">Logout</a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+<main class="page-content">
+
+    <h1 class="page-title">
+        Reports
+    </h1>
+
+    <section class="grid grid-2">
+
+        <!-- Orders Report -->
+
+        <div class="card">
+
+            <h2>Orders Report</h2>
+
+            <p>
+                View order-related information and statistics.
+            </p>
+
+            <br>
+
+            <button
+                class="btn btn-primary"
+                id="ordersReportButton">
+                Load Orders Report
+            </button>
+
+            <div id="ordersReportResult">
+                <p>No report loaded.</p>
+            </div>
+
+        </div>
+
+        <!-- Shipments Report -->
+
+        <div class="card">
+
+            <h2>Shipments Report</h2>
+
+            <p>
+                View shipment-related information and statistics.
+            </p>
+
+            <br>
+
+            <button
+                class="btn btn-primary"
+                id="shipmentsReportButton">
+                Load Shipments Report
+            </button>
+
+            <div id="shipmentsReportResult">
+                <p>No report loaded.</p>
+            </div>
+
+        </div>
+
+        <!-- Payments Report -->
+
+        <div class="card">
+
+            <h2>Payments Report</h2>
+
+            <p>
+                View payment-related information and statistics.
+            </p>
+
+            <br>
+
+            <button
+                class="btn btn-primary"
+                id="paymentsReportButton">
+                Load Payments Report
+            </button>
+
+            <div id="paymentsReportResult">
+                <p>No report loaded.</p>
+            </div>
+
+        </div>
+
+        <!-- Deliveries Report -->
+
+        <div class="card">
+
+            <h2>Deliveries Report</h2>
+
+            <p>
+                View delivery-related information and statistics.
+            </p>
+
+            <br>
+
+            <button
+                class="btn btn-primary"
+                id="deliveriesReportButton">
+                Load Deliveries Report
+            </button>
+
+            <div id="deliveriesReportResult">
+                <p>No report loaded.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="js/api.js"></script>
+
+<script>
+
+    document
+        .getElementById("ordersReportButton")
+        .addEventListener("click", async function () {
+
+            const result =
+                document.getElementById("ordersReportResult");
+
+            try {
+
+                const data =
+                    await apiRequest("/Reports/orders");
+
+                result.innerHTML = `
+                    <p><strong>Total Orders:</strong> ${data.totalOrders}</p>
+                    <p><strong>Pending:</strong> ${data.pendingOrders}</p>
+                    <p><strong>Confirmed:</strong> ${data.confirmedOrders}</p>
+                    <p><strong>Processing:</strong> ${data.processingOrders}</p>
+                    <p><strong>Shipped:</strong> ${data.shippedOrders}</p>
+                    <p><strong>Delivered:</strong> ${data.deliveredOrders}</p>
+                    <p><strong>Cancelled:</strong> ${data.cancelledOrders}</p>
+                    <p><strong>Total Order Value:</strong> ₹${data.totalOrderValue}</p>
+                `;
+
+            } catch (error) {
+
+                result.innerHTML =
+                    `<p>Unable to load orders report.</p>`;
+
+            }
+
+        });
+
+
+    document
+        .getElementById("shipmentsReportButton")
+        .addEventListener("click", async function () {
+
+            const result =
+                document.getElementById("shipmentsReportResult");
+
+            try {
+
+                const data =
+                    await apiRequest("/Reports/shipments");
+
+                result.innerHTML = `
+                    <p><strong>Total Shipments:</strong> ${data.totalShipments}</p>
+                    <p><strong>Pending:</strong> ${data.pendingShipments}</p>
+                    <p><strong>In Transit:</strong> ${data.inTransitShipments}</p>
+                    <p><strong>Out for Delivery:</strong> ${data.outForDelivery}</p>
+                    <p><strong>Delivered:</strong> ${data.deliveredShipments}</p>
+                    <p><strong>Returned:</strong> ${data.returnedShipments}</p>
+                    <p><strong>Cancelled:</strong> ${data.cancelledShipments}</p>
+                `;
+
+            } catch (error) {
+
+                result.innerHTML =
+                    `<p>Unable to load shipments report.</p>`;
+
+            }
+
+        });
+
+
+    document
+        .getElementById("paymentsReportButton")
+        .addEventListener("click", async function () {
+
+            const result =
+                document.getElementById("paymentsReportResult");
+
+            try {
+
+                const data =
+                    await apiRequest("/Reports/payments");
+
+                result.innerHTML = `
+                    <p><strong>Total Payments:</strong> ${data.totalPayments}</p>
+                    <p><strong>Pending:</strong> ${data.pendingPayments}</p>
+                    <p><strong>Processing:</strong> ${data.processingPayments}</p>
+                    <p><strong>Completed:</strong> ${data.completedPayments}</p>
+                    <p><strong>Failed:</strong> ${data.failedPayments}</p>
+                    <p><strong>Refunded:</strong> ${data.refundedPayments}</p>
+                    <p><strong>Total Paid Amount:</strong> ₹${data.totalPaidAmount}</p>
+                `;
+
+            } catch (error) {
+
+                result.innerHTML =
+                    `<p>Unable to load payments report.</p>`;
+
+            }
+
+        });
+
+
+    document
+        .getElementById("deliveriesReportButton")
+        .addEventListener("click", async function () {
+
+            const result =
+                document.getElementById("deliveriesReportResult");
+
+            try {
+
+                const data =
+                    await apiRequest("/Reports/deliveries");
+
+                result.innerHTML = `
+                    <p><strong>Total Deliveries:</strong> ${data.totalDeliveries}</p>
+                    <p><strong>Delivered:</strong> ${data.delivered}</p>
+                    <p><strong>Out for Delivery:</strong> ${data.outForDelivery}</p>
+                    <p><strong>In Transit:</strong> ${data.inTransit}</p>
+                    <p><strong>Returned:</strong> ${data.returned}</p>
+                `;
+
+            } catch (error) {
+
+                result.innerHTML =
+                    `<p>Unable to load deliveries report.</p>`;
+
+            }
+
+        });
+
+</script>
+```
+
+</body>
+</html>
